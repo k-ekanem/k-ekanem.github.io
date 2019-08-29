@@ -1,0 +1,29 @@
+* { box-sizing: border-box }
+
+body { font-family: Arial, sans-serif; font-size: 100%; }
+
+/*-----styles for the first section-----*/
+.intro img { width: 100%; max-width: 250px; height: auto; }
+.intro::after { clear: both; content: ""; display: table; }
+.intro h1 { color: black; }
+.intro a:link { color: green; text-decoration: none; }
+.intro a:visited { color: maroon; }
+.intro a:hover { color: darkgreen; }
+.intro a:active { color: black; }
+
+/*--Arranging and styling the other sections - some apply to the first as well--*/
+.section-head { float: left; width: 30%; margin-top: 0px; color: green; }
+.section-head span { display: inline-block; border-top: 3px solid black; padding-top: 10px;  }
+.section-content { float: left; width: 70%; padding-left: 20px; border-top: 3px solid black; }
+
+ul { list-style-type: square; }
+.skills ul { padding: 10px 0px 0px; list-style-position: inside; }
+.place { font-weight: bold; }
+.role { font-style: italic; }
+
+.experience, .education, .skills, .courses, .service { overflow: auto; margin-top: 10px; }
+
+/*-----On smaller screens. To avoid ugly overlap-----*/
+@media screen and (max-width: 600px) {
+ .section-head, .section-content { float: none; width: 100%; padding: 0px; } 
+}
