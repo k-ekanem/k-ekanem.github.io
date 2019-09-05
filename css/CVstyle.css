@@ -1,29 +1,161 @@
 * { box-sizing: border-box }
 
-body { font-family: Arial, sans-serif; font-size: 100%; }
+body { 
+	font-family: Arial, sans-serif; 
+	font-size: 100%; 
+}
 
 /*-----styles for the first section-----*/
-.intro img { width: 100%; max-width: 250px; height: auto; }
-.intro::after { clear: both; content: ""; display: table; }
-.intro h1 { color: black; }
-.intro a:link { color: green; text-decoration: none; }
-.intro a:visited { color: maroon; }
-.intro a:hover { color: darkgreen; }
-.intro a:active { color: black; }
+.intro img { 
+	width: 100%; 
+	max-width: 250px; 
+	height: auto; 
+}
+
+.intro::after { 
+	clear: both; 
+	content: ""; 
+	display: table; 
+}
+
+.intro h1 { 
+	color: black; 
+}
+
+.intro a:link, .intro a:visited { color: green; text-decoration: none; }
+.intro a:hover, .intro a:active { color: seagreen; }
 
 /*--Arranging and styling the other sections - some apply to the first as well--*/
-.section-head { float: left; width: 30%; margin-top: 0px; color: green; }
-.section-head span { display: inline-block; border-top: 3px solid black; padding-top: 10px;  }
-.section-content { float: left; width: 70%; padding-left: 20px; border-top: 3px solid black; }
+.section-head { 
+	float: left;
+	width: 30%; 
+	margin-top: 0px; 
+	color: green; 
+}
 
-ul { list-style-type: square; }
-.skills ul { padding: 10px 0px 0px; list-style-position: inside; }
-.place { font-weight: bold; }
-.role { font-style: italic; }
+.section-head span { 
+	display: inline-block; 
+	border-top: 3px solid black; 
+	padding-top: 10px; 
+}
 
-.experience, .education, .skills, .courses, .service { overflow: auto; margin-top: 10px; }
+.section-content { 
+	float: left; 
+	width: 70%; 
+	padding-left: 20px; 
+	border-top: 3px solid black; 
+}
 
-/*-----On smaller screens. To avoid ugly overlap-----*/
+#contact-button {
+	display: inline-block;
+	background-color: green;
+	color: white;
+	padding: 7px;
+	border-radius: 4px;
+	margin: 5px 0;
+}
+
+#contact-button:hover {
+	background-color: darkgreen;
+}
+
+ul { 
+	list-style-type: square; 
+}
+
+.skills ul { 
+	padding: 10px 0px 0px; 
+	list-style-position: inside; 
+}
+
+.place { 
+	font-weight: bold; 
+}
+
+.role { 
+	font-style: italic; 
+}
+
+.experience, .education, .skills, .courses, .service { 
+	overflow: auto; 
+	margin-top: 10px; 
+}
+
+/*-----for smaller displays-----*/
 @media screen and (max-width: 600px) {
- .section-head, .section-content { float: none; width: 100%; padding: 0px; } 
+	.section-head, .section-content { 
+ 		float: none; 
+ 		width: 100%; 
+ 		padding: 0px; 
+ 	} 
+}
+
+/*-------FORM STYLES---------*/
+
+.form-container { 
+	background-color: #eee; 
+	padding: 10px;
+}
+
+.form-row {
+	margin-bottom: 15px;
+
+}
+
+.form-label, .form-input {
+	float: left;
+	display: inline-block;
+	padding: 7px;
+}
+
+.form-label {
+	width: 25%;
+	font-size: 1em;
+	padding: 7px;
+}
+
+.form-input {
+	width: 75%;
+	border: none;
+	border-bottom: 1px solid #bbb;
+	outline: none;
+	background: transparent;
+}
+
+.form-input:focus {
+	border-bottom: 1px solid green;
+}
+
+textarea.form-input {
+	border: 1px solid #aaa;
+	height: 100px;
+	font-family: Arial, sans-serif;
+}
+
+textarea.form-input:focus {
+	border: 1px solid green;
+}
+
+input[type="submit"] {
+	background-color: green;
+	color: white;
+	padding: 13px;
+	border: none;
+	border-radius: 5px;
+	float: right;
+	outline: none;
+	text-decoration: none;
+}
+
+.form-row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 600px) {
+	.form-label, .form-input {
+		float: none;
+		width: 100%;
+	}
 }
